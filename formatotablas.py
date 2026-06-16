@@ -58,7 +58,7 @@ class FormatoTablas:
   def tabla_original(self, anio):
     return pd.read_csv(self._sistema_de_archivos.path_a_archivo_crudo(anio))
 
-  def nueva_tabla_con_los_nombres_traducidos(self, df_original):
+  def nueva_tabla_con_los_nombres_traducidos(self, df_original, anio):
     columnas_df_original = df_original.columns
 
     columnas_df_nuevo = self.columnas_estandar()
@@ -143,7 +143,7 @@ class FormatoTablas:
 
     df = self.tabla_original(anio)
     df = self.nueva_tabla_sin_columnas_espurias(df)
-    df = self.nueva_tabla_con_los_nombres_traducidos(df)
+    df = self.nueva_tabla_con_los_nombres_traducidos(df, anio)
     df = self.agregar_columna_con_anio(df, anio)
     df = self.convertir_fechas_a_datetime(df, anio)
     df = self.estandarizar_genero(df)
