@@ -1,3 +1,5 @@
+import pandas as pd
+
 class FormatoTablas:
   def __init__(self, sistema_de_archivos):
     self._sistema_de_archivos = sistema_de_archivos
