@@ -28,7 +28,7 @@ class SistemaDeArchivos:
     elif int(anio) == 2024:
       return 'badata_ecobici_recorridos_realizados_2024.csv'
     elif 2025 <= int(anio) <= 2026:
-      return 'Trips-' + str(anio) '.csv'
+      return 'Trips-' + str(anio) + '.csv'
     else:
       raise Exception('El año proporcionado (' + str(anio) + ') es inválido')
 
